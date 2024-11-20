@@ -6,7 +6,6 @@ import {
   SelectArrayInput,
   SelectInput,
   SimpleForm,
-  TextInput,
 } from 'react-admin';
 import { useNotify, useRedirect } from 'react-admin';
 import { dataProvider } from '../dataProvider';
@@ -38,8 +37,8 @@ export const OrderEdit = () => {
       <SimpleForm onSubmit={handleSubmit}>
         <NumberInput source="total" />
 
-        <ReferenceInput source="user.id" reference="user" label="User">
-          <SelectInput optionText="email" />
+        <ReferenceInput source="user.email" reference="user" label="User">
+          <SelectInput optionText="email" optionValue='id'/>
         </ReferenceInput>
 
         <ReferenceArrayInput source="products" reference="product" label="Products">

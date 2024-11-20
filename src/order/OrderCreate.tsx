@@ -1,13 +1,11 @@
 import {
   Create,
-  Edit,
   NumberInput,
   ReferenceArrayInput,
   ReferenceInput,
   SelectArrayInput,
   SelectInput,
   SimpleForm,
-  TextInput,
 } from 'react-admin';
 import { useNotify, useRedirect } from 'react-admin';
 import { dataProvider } from '../dataProvider';

@@ -1,4 +1,4 @@
-import { ArrayField, ChipField, Datagrid, FunctionField, Link, List, NumberField, SingleFieldList, TextField } from 'react-admin';
+import { ArrayField, ChipField, Datagrid,  List, NumberField, SingleFieldList, TextField } from 'react-admin';
 
 export const OrderList = () => (
     <List>
@@ -8,14 +8,9 @@ export const OrderList = () => (
             <NumberField source="user.id" />
             <ArrayField source="products">
                 <SingleFieldList >
-            <FunctionField
-            render={(record) => (
-              <Link to={`/product/${record.id}/show`} >
-                {record.name}
-              </Link>
-            )}
-          />
-                </SingleFieldList></ArrayField>
+                  <ChipField onClick={(e)=>e.preventDefault()} source="name" />
+                </SingleFieldList>
+            </ArrayField>
         </Datagrid>
     </List>
 );
