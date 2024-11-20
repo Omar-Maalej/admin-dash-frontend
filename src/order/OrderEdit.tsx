@@ -37,7 +37,7 @@ export const OrderEdit = () => {
       <SimpleForm onSubmit={handleSubmit}>
         <NumberInput source="total" />
 
-        <ReferenceInput source="user.email" reference="user" label="User">
+        <ReferenceInput source="user.id" reference="user" label="User">
           <SelectInput optionText="email" optionValue='id'/>
         </ReferenceInput>
 
