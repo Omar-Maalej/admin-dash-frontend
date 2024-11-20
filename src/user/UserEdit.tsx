@@ -1,4 +1,4 @@
-import { Edit, SimpleForm, TextInput } from 'react-admin';
+import { Edit, SelectInput, SimpleForm, TextInput } from 'react-admin';
 
 export const UserEdit = () => (
     <Edit>
@@ -6,8 +6,8 @@ export const UserEdit = () => (
             <TextInput source="firstName" />
             <TextInput source="lastName" />
             <TextInput source="address" />
-            <TextInput source="email" />
-            <TextInput source="role" />
+            <TextInput type = 'email' source="email" />
+            <SelectInput choices={["admin", "user"]} source="role" label="Role" />  
         </SimpleForm>
     </Edit>
 );

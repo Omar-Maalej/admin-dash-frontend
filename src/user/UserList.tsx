@@ -1,7 +1,7 @@
 import { List, Datagrid, TextField } from 'react-admin';
 
 export const UserList = () => (
-  <List disableAuthentication>
+  <List>
     <Datagrid>
       <TextField source="id" label="ID" />
       <TextField source="firstName" label="First Name" />
